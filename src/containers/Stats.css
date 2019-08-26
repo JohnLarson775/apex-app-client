@@ -1,0 +1,96 @@
+.Stats .top {
+  width: 170px;
+  margin: 0px;
+  float: left;
+}
+
+.Stats .top p {
+  margin-bottom: 3px;
+}
+
+.Stats .top h2 {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.Stats .bottom {
+  clear: left;
+  padding-top: 60px;
+  max-width: 50%;
+}
+
+.Stats .error {
+  padding: 60px;
+  width: 60%;
+}
+
+.Stats .loading {
+  padding: 100px;
+  text-align: center;
+}
+
+.Stats .list-group-item {
+  background: rgba(0, 0, 0, 0.1);
+  text-transform: capitalize;
+}
+
+.rank_img img {
+  width: 80%;
+  max-width: 120px;
+  padding-top: 12px;
+  padding-left: 20px;
+}
+
+/* Legend image container */
+.floatcontainer {
+  margin-top: -450px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  width: 50%;
+}
+
+/* Loading spinner */
+.glyphicon.spinner {
+  font-size: 40px;
+  text-align: center;
+  animation: spin 1.5s infinite linear;
+}
+@keyframes spin {
+  from { transform: scale(1) rotate(0deg); }
+  to { transform: scale(1) rotate(360deg); }
+}
+
+/* Change padding on phones */
+@media all and (max-width: 600px) {
+  .Stats .bottom {
+    padding-top: 170px;
+    max-width: 100%;
+  }
+
+  .Stats .error {
+    width: 100%;
+  }
+
+  .floatcontainer {
+    margin-left:0;
+    width: 100%;
+  }
+}
+
+/* Change padding on small phones */
+@media all and (max-width: 350px) {
+  .Stats .bottom {
+    padding-top: 110px;
+    max-width: 100%;
+  }
+
+  .Stats .top h2 {
+    margin-bottom: 5px;
+    margin-top: 0px;
+  }
+
+  .rank_img img {
+    padding-top: 4px;
+  }
+}

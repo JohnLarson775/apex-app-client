@@ -1,53 +1,52 @@
 import React, { Component } from "react";
-import { Button, ButtonGroup, ButtonToolbar, InputGroup, FormControl} from "react-bootstrap";
+import { Button, ButtonGroup, ButtonToolbar, InputGroup, FormControl } from "react-bootstrap";
 import "./Home.css";
+import logo from "../apex_logo.jpg"
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
-
+    
     this.state = {
       username: "",
-      password: ""
+      platform: "PS4",
     };
-  }
+  };
 
   validateForm() {
-    return this.state.username.length > 0 && this.state.password.length > 0;
-  }
+    return this.state.username.length > 0 ;
+  };
 
-  handleChange = event => {
-    this.setState({
-      [event.target.id]: event.target.value
-    });
-  }
+  platform(i) {
+    this.setState({platform: i});
+  };
 
-  handleSubmit = event => {
-    event.preventDefault();
+  reRoute = () => {
+    this.props.history.push(`/stats/${this.state.username}/${this.state.platform}`);
   }
 
   render() {
     return (
-      <div>
-        <div className="Home">
-          <div className="lander">
-            <h1>The Apex Legend</h1>
-            <p>See how you stack up against the competition in Kings Canyon</p>
-            <ButtonToolbar className="center">
-              <ButtonGroup>
-                <Button variant="primary">PC</Button>
-                <Button>PS4</Button>
-                <Button>X1</Button>
-              </ButtonGroup>
-                <InputGroup>
-                  <FormControl
-                    autoFocus
-                    placeholder="Enter username"
-                  />
-                </InputGroup>
-              <Button>Enter</Button>
-            </ButtonToolbar>
-          </div>
+      <div className = "Home">
+        <div className = "lander">
+          <img src = {logo} alt = "Not Available"/>
+          <p>See how you stack up against the competition in Kings Canyon</p>       
+          <ButtonToolbar className = "center">
+            <ButtonGroup className = "center">
+              <Button onClick = {() => this.platform('PC')} active = {this.state.platform === 'PC'}>PC</Button>
+              <Button onClick = {() => this.platform('PS4')} active = {this.state.platform === 'PS4'}>PS4</Button>
+              <Button onClick = {() => this.platform('X1')} active = {this.state.platform === 'X1'}>X1</Button>
+            </ButtonGroup>
+            <InputGroup className = "center">
+              <FormControl 
+                onChange = {(event) => this.setState({ username: event.target.value })} 
+                value = {this.state.username} 
+                autoFocus
+                placeholder = "Enter username"
+              />
+            </InputGroup>
+              <Button className = "center" onClick = {this.reRoute} disabled = {!this.validateForm()}>Enter</Button>
+          </ButtonToolbar>
         </div>
       </div>
     );

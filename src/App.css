@@ -2,6 +2,25 @@
   margin-top: 15px;
 }
 
+.App html, body {
+  background: url('apex_red.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.App .navbar {
+  background: rgba(0, 0, 0, 0.1);
+  font-family: 'Teko', sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: white;
+}
+
 .App .navbar-brand {
-  font-weight: bold;
+  font-family: 'Teko', sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: white;
 }

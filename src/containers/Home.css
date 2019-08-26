@@ -3,19 +3,17 @@
   text-align: center;
 }
 
-.Home .lander h1 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-}
-
-.Home .lander p {
-  color: #999;
-}
-
-.center {
+.Home .lander .center {
   display: inline-block;
+  margin-top: 10px;
+  text-align: center;
 }
 
+input.form-control {
+  font-size: 16px;
+}
+
+/* Change padding on phones */
 @media all and (min-width: 480px) {
   .Home {
     padding: 60px 0;
