@@ -1,5 +1,5 @@
 .Stats .top {
-  width: 170px;
+  width: 190px;
   margin: 0px;
   float: left;
 }
@@ -17,6 +17,7 @@
   clear: left;
   padding-top: 60px;
   max-width: 50%;
+  margin-bottom: 15px;
 }
 
 .Stats .error {
@@ -30,20 +31,20 @@
 }
 
 .Stats .list-group-item {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   text-transform: capitalize;
 }
 
 .rank_img img {
-  width: 80%;
-  max-width: 120px;
+  float: left;
+  width: 100px;
   padding-top: 12px;
   padding-left: 20px;
 }
 
 /* Legend image container */
 .floatcontainer {
-  margin-top: -450px;
+  margin-top: -440px;
   margin-right: 0;
   margin-bottom: 0;
   margin-left: auto;
@@ -68,12 +69,21 @@
     max-width: 100%;
   }
 
+  .Stats .top h2 {
+    margin-top: 0px;
+  }
+
   .Stats .error {
     width: 100%;
   }
 
+  .rank_img img {
+    padding-top: 4px;
+  }
+
   .floatcontainer {
-    margin-left:0;
+    margin-top: -450px;
+    margin-left: 0;
     width: 100%;
   }
 }
@@ -81,16 +91,10 @@
 /* Change padding on small phones */
 @media all and (max-width: 350px) {
   .Stats .bottom {
-    padding-top: 110px;
-    max-width: 100%;
+    padding-top: 90px;
   }
 
-  .Stats .top h2 {
-    margin-bottom: 5px;
-    margin-top: 0px;
-  }
-
-  .rank_img img {
-    padding-top: 4px;
+  .floatcontainer {
+    margin-top: -420px;
   }
 }

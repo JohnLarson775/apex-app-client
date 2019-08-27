@@ -110,7 +110,7 @@ export default class Stats extends Component {
             <p>{ "Level: " + this.state.level }</p>
             <p>{ "Rank: " + this.state.rank }</p>
           </div>
-          <div className = "rank_img" style = {{float:"left"}}>
+          <div className = "rank_img">
             <img src = { this.state.rank_img } alt = "Not Available"/>
           </div>
           <div className = "bottom">
