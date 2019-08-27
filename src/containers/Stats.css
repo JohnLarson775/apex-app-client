@@ -17,6 +17,7 @@
   clear: left;
   padding-top: 60px;
   max-width: 50%;
+  overflow: auto;
 }
 
 .Stats .error {
@@ -45,7 +46,7 @@
 .floatcontainer {
   margin-top: -440px;
   margin-right: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
   margin-left: auto;
   width: 50%;
 }
@@ -95,5 +96,6 @@
 
   .floatcontainer {
     margin-top: -420px;
+    margin-bottom: 0px;
   }
 }
