@@ -4,6 +4,7 @@
 }
 
 .App html, body {
+  height: 90vh;
   background: url('apex_red.jpg') no-repeat center center fixed;
   background-size: cover;
 }
